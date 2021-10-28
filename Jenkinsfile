@@ -10,10 +10,10 @@ pipeline {
             }  
         stage('Docker Build') {
             steps {
-		    sh '''#!/bin/bash -l
-		if sudo docker ps -a | grep maven-app;then sudo docker stop maven-app && sudo docker rm maven-app; else exit 0; fi
-	        sudo docker build -t maven-app:test .
-		'''
+		    
+		    
+	            sh 'sudo docker build -t maven-app:test .'
+		    
             }
         }
 	stage('Approval Step'){
