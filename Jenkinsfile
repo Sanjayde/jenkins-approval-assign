@@ -4,6 +4,7 @@ pipeline {
     stages {
 	stage ('Checkout') {
             steps {
+		git 'https://github.com/Sanjayde/jenkins-approval-assign.git'
                 sh 'echo "Checkout Complete.........."'
                 }
             }  
